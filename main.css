@@ -1,0 +1,334 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:root{
+    --main-color:rgb(166, 24, 166);
+    --color-chat:#b3b3b391;
+}
+body{
+    background-color: rgb(228, 228, 228);
+}
+.main {
+    width: 1535px;
+    max-width: 100%;
+    position: relative;
+    /* background-color: aqua; */
+    overflow: hidden;
+    height: 715px;
+    max-height: 100%;
+}
+.left {
+    background-color: var(--main-color);
+    /* width: 35vw; */
+    width: 500px;
+    /* height: 83vh; */
+    height: 600px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 48%;
+    position: relative;
+    left: -69px;
+}
+.right {
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    width: 500px;
+    height: 600px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 48%;
+}
+.content{
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 20px;
+
+}
+.content .phone{
+    padding-left: 85px;
+    margin-bottom: 75px;
+}
+.content .phone-structure {
+    background-color: white;
+    width: 300px;
+    height: 600px;
+    border-radius: 55px;
+    padding: 10px;
+    
+}
+.content .text{
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.text p+h2 {
+    align-self: flex-end;
+    display: flex;
+    padding: 5px;
+    line-height: 1.7;
+    font-size: 35px;
+}
+.text h2 + p{
+    align-self: flex-start;
+    padding: 5px;
+    display: flex;
+    margin-left: -2px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #777;
+}
+.phone-structure .phone-chat{
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    height: 100%;
+    border-radius: 55px;
+}
+.phone-structure .head-phone {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100px;
+    /* border-radius: 55px; */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+.head-phone .white {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: white;
+    width: 180px;
+    height: 35px;
+    margin: 0 auto;
+    left: 18%;
+    position: absolute;
+    top: -1px;
+    grid-row: 1;
+}
+.head-phone .image img{
+    border-radius: 50%;
+    max-width: 100%;
+    border: 1px solid white;
+}
+.head-phone .user{
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: auto auto auto;
+}
+
+.head-phone .image{
+    width:40px ;
+    margin-left: 40px;
+    position: relative;
+}
+.user .image::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 3px solid ;
+    border-color: transparent transparent white white;
+    left: -20px;
+    top: 12px;
+    transform: rotate(45deg);
+}
+.head-phone .user .text{
+    grid-column: 2;
+    margin-left: -30px;
+    margin-bottom: 10px;
+    color: white;
+}
+.head-phone .user  .text h2{
+    font-size: 13px;
+    margin-left: 15px;
+    
+}
+.head-phone .user  .text p{
+    font-size: 10px;
+    margin-left: 15px;
+    color: #dfcece;
+}
+.head-phone .user  span{
+    width: 20px;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+.head-phone .user  span span{
+    width: 4px;
+    height: 4px;
+    margin-bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+.phone-chat .chat{
+    position: relative;
+    padding: 10px;
+}
+.phone-chat .chat p:not(.special) {
+    background-color: var(--color-chat);
+    width: 150px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 14px;
+    font-size: 10px;
+}
+.phone-chat .chat .special {
+    position: relative;
+    width: fit-content;
+    max-width: 150px;
+    /* right: 0px; */
+    left: 100px;
+    top: 70px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 14px;
+    margin: 10px 0;
+    font-size: 10px;
+}
+
+.chat .images{
+    position: absolute;
+    right: 0;
+    width: 180px;
+    max-width: 190px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.chat .images  img{
+    width: calc(150px / 3 );
+    border-radius: 14px;
+    margin:10px 0;
+}
+.sale {
+    padding: 2px;
+    background-color: var(--main-color);
+    width: 200px;
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: absolute;
+    bottom: -150px;
+    height: 43px;
+    border-radius: 15px;
+    color: white;
+}
+.sale input{
+    grid-column: 1;
+    grid-row: 1;
+    width: 20px;
+    margin-left: 13px;
+}
+.sale label{
+    grid-column: 1;
+    grid-row: 1;
+    margin-left:40px ;
+    display: flex;
+    align-items: center;
+    color: #ffffffd9;
+}
+.sale span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.chat .box-masage {
+    margin: 0 auto;
+    width: 258px;
+    height: 56px;
+    position: absolute;
+    bottom: -266px;
+    border-radius: 27px;
+    background-color: black;
+}
+.chat .box-masage input {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    border-radius: 26px;
+    padding: 30px;
+    z-index: -1;
+}
+.chat .box-masage .send {
+    z-index: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.chat .box-masage .send::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border: 5px solid;
+    border-color: white white transparent transparent;
+    left: 7px;
+    top: 11px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+@media (max-width:767px) {
+    .right{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        overflow:visible;
+    }
+    .content {
+        top: 480px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        margin:0 auto;
+    }
+    .content .text{
+        text-align: center;
+        display: block;
+    }
+    .text p+h2:not(.user .text){
+        display: block;
+        text-align: center;
+    }
+    .left{
+            left: -253px;
+    }
+    .head-phone .user .text p {
+        font-size: 10px;
+        margin-left: 29px;
+        color: #dfcece;
+    }
+    .content .phone{
+        margin: 0 auto;
+        padding: 0;
+    }
+
+}
